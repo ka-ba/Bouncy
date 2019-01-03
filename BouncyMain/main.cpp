@@ -30,6 +30,8 @@ int main(int argc, char *argv[])
     QTimer timer;
     QObject::connect( &timer, SIGNAL(timeout()), &scene, SLOT(advance()) );
     timer.start( 1000 / 30 );
+//    timer.start( 1000 );
+    qDebug() << "is timer single shot?" << timer.isSingleShot();
 
 //    BouncyWindow w;
 //    w.show();

@@ -22,7 +22,7 @@ void BallTest::testRandInit()
     srand((unsigned)time(0));
     for( int i=0; i<10; i++ ) {
         Ball b;
-        QPointF p = b.getPos();
+        QPointF p = b.pos();
         QVERIFY2( -100.0 <= p.x(), "illegal x-pos (too small)" );
         QVERIFY2( p.x() <= 100.0, "illegal x-pos (too large)" );
         QVERIFY2( -100.0 <= p.y(), "illegal y-pos (too small)" );
